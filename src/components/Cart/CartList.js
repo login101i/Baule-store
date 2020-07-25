@@ -9,7 +9,7 @@ export default function CartList({value}) {
         <div className="container-fluid ">
             {cart.map(item=>{
                 return <CartItem  key={item.id}
-                item={item} value={value}/>
+                item={item} value={value} />
                 // codeGame
 
             })}
