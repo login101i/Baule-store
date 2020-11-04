@@ -1,11 +1,22 @@
 :root{
-  --mainBlue:#2a2a72;
-  --lightBlue:#009ffd;
-  --mainWhite:#f3f3f3;
+  --mainBlue:#24d2e9cc;
+  --lightBlue:#258ae985;
+  --mainWhite:#e1e7e9;
   --mainDark:#232528;
   --mainYellow:#ecd02e;
+  --primaryColor: #af9a7d;
+  
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
 }
+
 body{
   font-family: "Oswald" sans-serif !important;
   background:var(--mainWhite) !important; 
@@ -27,7 +38,7 @@ body{
 }
 
 .navbar{
-  background: blue;
+  background: rgba(67, 50, 221, 0.705);
 }
 .btn-black{
   background:transparent;
