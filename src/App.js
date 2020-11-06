@@ -1,41 +1,81 @@
-import React, { Component } from "react"
-import { Switch, Route } from 'react-router-dom'
-
-// import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css'
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Cart from './components/Cart'
-import Default from './components/Default'
-import Details from './components/Details'
-
 import ProductList from './components/ProductList'
-import Modal from './components/Modal'
+import ProductDetails from './components/Product'
+import Cart from './components/Cart'
+import Home from './components/Home'
+import Default from './components/Default'
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <>
         <Navbar />
-    
         <Switch>
-          <Route exact path="/" component={ProductList} />
-          <Route path="/details" component={Details} />
-          <Route path="/cart" component={Cart} />
-          <Route path="/productlist" component={ProductList} />
-          <Route  component={Default} />
-          
+
+          <Route exact path="/" component={Home} />
+          {/* <Route exact path="/productlist" component={ProductList} /> */}
+          <Route exact path="/productDetails" component={ProductDetails} />
+          <Route exact path="/cart" component={Cart} />
+          <Route component={Default}/>
+
         </Switch>
-        <Modal/>
 
 
 
-
-
-      </React.Fragment>
-
-    );
+      </>
+    )
   }
 }
 
-export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { Component } from "react"
+// import { Route, Switch } from 'react-router-dom'
+// import "bootstrap/dist/css/bootstrap.min.css"
+
+// import Home from './components/Home'
+// import Cart from './components/Cart'
+// import ProductDetails from './components/ProductDetails'
+// import Default from './components/Default'
+// import Navigation from './components/Navbar'
+
+
+
+// import './App.css';
+
+// class App extends Component {
+//   render() {
+//     return (
+//       <React.Fragment>
+//         <Navigation />
+//         <Switch>
+
+//           <Route exact path='/' component={Home} />
+//           <Route exact path='/cart' component={Cart} />
+//           <Route exact path='/productdetails' component={ProductDetails} />
+//           <Route component={Default} />
+
+//         </Switch>
+
+//       </React.Fragment>
+
+//     );
+//   }
+// }
+
+// export default App;

@@ -6,6 +6,9 @@
 .pnp.js
 .env.development
 
+#folders
+/original
+
 # testing
 /coverage
 

@@ -1,36 +1,38 @@
 :root{
-  --mainBlue:#24d2e9cc;
-  --lightBlue:#258ae985;
-  --mainWhite:#e1e7e9;
+  --mainRed:rgba(116, 37, 37, 0.698);
+  --mainBlue:rgb(54, 54, 124);
+  --mainWhite:rgb(236, 236, 236);
   --mainDark:#232528;
-  --mainYellow:#ecd02e;
-  --primaryColor: #af9a7d;
-  
-  --offWhite: #f7f7f7;
-  --mainBlack: #222;
-  --mainGrey: #ececec;
-  --darkGrey: #cfcfcf;
-  --mainTransition: all 0.3s linear;
-  --mainSpacing: 3px;
-  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
-  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
-
+  --mainYellow:rgb(143, 143, 80);
 }
 
 body{
-  font-family: "Oswald" sans-serif !important;
-  background:var(--mainWhite) !important; 
-  /* not working */
-  color: var(--mainDark) !important;
+font-family: 'Open Sans', sans-serif !important;
+background-color: var(--mainWhite) !important;
+color:var(--mainDark) !important;
 
 }
+
 .text-title{
+      font-family: 'Itim', cursive;
+      font-size: 22px;
+      letter-spacing: 0.3rem;
+}
+
+.text-blue{
+  color:rgba(155, 13, 37, 0.89);
+  font-size:24px;
+}
+
+
+
+/* .text-title{
   font-family: 'Ranchers', cursive;
   letter-spacing: 0.3rem;
 
 
-}
-.text-blue{
+} */
+/* .text-blue{
   color: var(--mainBlue)
 }
 .text-bright{
@@ -58,4 +60,4 @@ body{
   cursor:pointer;
   font-size:1.2rem;
   color:var(--mainYellow)
-}
+} */
