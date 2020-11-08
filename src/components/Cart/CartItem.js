@@ -15,7 +15,7 @@ export default function CartItem({ item, value }) {
                 <div className="col-10 mx-auto col-lg-2">
                     <p className="text-uppercase">
                         <img src={img}
-                            style={{ width: '7rem' }}
+                            style={{ width: '12rem' }}
                             className="img-fluid"
                             alt="" />
                     </p>

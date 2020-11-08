@@ -22,24 +22,25 @@ export default class Modal extends Component {
                                 <ModalContainer>
                                     <div className="row">
                                         <div id="modal" className="col-8 col-md-6 col-lg-4  mx-auto p-5 text-center">
+                                            <h2>Dodano do koszyka</h2>
                                             <h2>{title}</h2>
-                                            <h3>{price} zł</h3>
+                                            <h3>w cenie {price} zł/szt</h3>
                                             <img src={img} alt="" className="img-fluid py-3" />
 
-                                            <Link to="/">
+                                            <Link to="/cart">
                                                 <Button
                                                     onClick={() => {
                                                         value.addToCart(id)
                                                         closeModal()
                                                     }}
                                                 >
-                                                    Koszyk
+                                                    Twój koszyk
                                                 </Button>
                                             </Link>
                                             <Link to="/">
                                                 <Button
                                                     onClick={() => closeModal()}>
-                                                    Home
+                                                        Kontynuuj zakupy
                                                 </Button>
                                             </Link>
 

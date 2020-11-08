@@ -17,7 +17,7 @@ export default class Cart extends Component {
                         return (
                             <>
                                 <section className="col-10 mx-auto text-uppercase">
-                                    <Title title="Twój" name="koszyk" />
+                                    <Title title="Twój" name="Koszyk" />
                                 </section>
                                 <CartColumns />
                                 <CartList value={value}/>

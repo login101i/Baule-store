@@ -11,12 +11,12 @@ export default class Product extends Component {
         const { id, title, img, price, inCart } = this.props.product
 
         return (
-            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-4 my-3">
+            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-4 my-3 ">
                 <ProductConsumer>
                     {(value) => (
                         <div className="card">
                             <div className="img-container p-5 relative"
-                                onClick={() => value.handleDetail(id) }
+                                onClick={() => value.handleDetail(id)}
                             >
                                 <Link to='/productdetails'>
                                     <img src={img} alt="phone" className="card-img-top scale" />
@@ -24,7 +24,7 @@ export default class Product extends Component {
                                 <Button className="cart-btn"
                                     disabled={inCart ? true : false}
                                     onClick={() => {
-                                       
+
                                         value.openModal(id)
                                     }}
 
@@ -35,7 +35,7 @@ export default class Product extends Component {
                             </div>
                             {/* card footer */}
 
-                            <div className="card-footer mx- d-flex justify-content-center">
+                            <div className="card-footer  d-flex justify-content-between">
                                 <p className="align-self-center mb-0">{title}</p>
                                 <span className="ml-auto text-blue">{price} zł</span>
                             </div>
@@ -55,7 +55,7 @@ export default class Product extends Component {
 const ProductWrapper = styled.div`
 background-color:var(--mainWhite);
 overflow:hidden;
-cursor:none;
+// cursor:none;
 
 .card-footer{
     background:transparent;
@@ -67,15 +67,21 @@ cursor:none;
 }
 
 &:hover .scale{
-       transform:scale(1.02)
+       transform:scale(1.05)
 }
 &:hover .cart-btn{
-    transform:translate(0px)
+    transform:translate(0px);
+
  
 }
 
 .relative{
     position:relative
+}
+.cart-btn:hover{
+   color:rgb(236, 236, 236);
+       transform:translate(4px);
+
 }
 
 `

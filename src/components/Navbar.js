@@ -14,12 +14,12 @@ Creative Commons (Attribution 3.0 Unported);
 https://www.iconfinder.com/Makoto_msk*/}
             <Link to='/'></Link>
 
-            <Link to="./cart">
+            <Link to="/">
                 <img src={logo2} alt="" className="texto" />
             </Link>
-            <ul className="navbar-nav align-items-center">
+            <ul className="navbar-nav align-items-center py-1 my-2">
                 <li className="nav-item ml-5">
-                    <Link to="/" className="nav-link">
+                    <Link to="/" className="nav-link h4">
                         produkty
                     </Link>
 
@@ -29,7 +29,8 @@ https://www.iconfinder.com/Makoto_msk*/}
 
 
             <Link to="/cart" className='ml-auto'>
-                <Button>
+                <Button
+                    style={{ color: 'rgb(233, 227, 227)', borderColor: 'rgb(233, 227, 227)' }}>
                     <i className="fas fa-cart-plus">
                     </i>
                     <span className=" ml-4">Koszyk</span>
@@ -47,13 +48,17 @@ https://www.iconfinder.com/Makoto_msk*/}
 
 const NavbarWrapper = styled.div`
 background-color:var(--mainDark) !important;
+justify-content:center;
+align-items:center;
+
 .nav-link{
     color:var(--mainWhite) !important;
     text-transform:capitalize;
-    transition:all 1.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    font-weight:600;
 &:hover{
-    transform:scale(1.05);
-    font-weight:bold
+    transform:scale(1);
+
 }
 }
 
