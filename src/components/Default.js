@@ -14,7 +14,7 @@ export default class Default extends Component {
                             Nie ma strony o adresie bąbki
                         <span className="text-danger">
                                 {this.props.history.location.pathname}
-                            </span>. Przejdź na  <Link to="/">  stronę główną.
+                            </span>. Przejdź proszę na  <Link to="/">  stronę główną.
                         </Link>
                         </h2>
                     </div>
