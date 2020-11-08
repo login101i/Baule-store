@@ -4,11 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import { Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import ProductList from './components/ProductList'
-import ProductDetails from './components/Product'
+import ProductDetails from './components/ProductDetails'
 import Cart from './components/Cart'
 import Home from './components/Home'
 import Default from './components/Default'
+import Modal from './components/Modal'
+
 
 export default class App extends Component {
   render() {
@@ -19,11 +20,12 @@ export default class App extends Component {
 
           <Route exact path="/" component={Home} />
           {/* <Route exact path="/productlist" component={ProductList} /> */}
-          <Route exact path="/productDetails" component={ProductDetails} />
+          <Route exact path="/productdetails" component={ProductDetails} />
           <Route exact path="/cart" component={Cart} />
           <Route component={Default}/>
 
         </Switch>
+        <Modal/>
 
 
 

@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Title from './Title'
 import { storeProducts } from '../data'
 import { ProductConsumer } from '../context'
-import Product from '../components/Product'
+import Product from './Product'
 
 export default class ProductList extends Component {
     state = {

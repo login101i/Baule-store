@@ -11,31 +11,40 @@ export default class Product extends Component {
         const { id, title, img, price, inCart } = this.props.product
 
         return (
-            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-                <div className="card">
-                    <div className="img-container p-5 relative"
-                        onClick={() => console.log("kliknąłeś mnie")}
-                    >
-                        <Link to='/productdetails'>
-                            <img src={img} alt="phone" className="card-img-top scale" />
-                        </Link>
-                        <Button className="cart-btn"
-                            disabled={inCart ? true : false}
-                            onClick={() => console.log("dodano do koszyka")}
+            <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-4 my-3">
+                <ProductConsumer>
+                    {(value) => (
+                        <div className="card">
+                            <div className="img-container p-5 relative"
+                                onClick={() => value.handleDetail(id) }
+                            >
+                                <Link to='/productdetails'>
+                                    <img src={img} alt="phone" className="card-img-top scale" />
+                                </Link>
+                                <Button className="cart-btn"
+                                    disabled={inCart ? true : false}
+                                    onClick={() => {
+                                       
+                                        value.openModal(id)
+                                    }}
 
-                        >
-                            {inCart ? (<p class="text-capitalize mb-0">w koszyku</p>) : (<p className="text- mb-0">dodaj do koszyka</p>
-                            )}
-                        </Button>
-                    </div>
-                    {/* card footer */}
+                                >
+                                    {inCart ? (<p class="text-capitalize mb-0">w koszyku</p>) : (<p className="text- mb-0">dodaj do koszyka</p>
+                                    )}
+                                </Button>
+                            </div>
+                            {/* card footer */}
 
-                    <div className="card-footer mx- d-flex justify-content-center">
-                        <p className="align-self-center mb-0">{title}</p>
-                        <span className="ml-auto text-blue">{price} zł</span>
-                    </div>
+                            <div className="card-footer mx- d-flex justify-content-center">
+                                <p className="align-self-center mb-0">{title}</p>
+                                <span className="ml-auto text-blue">{price} zł</span>
+                            </div>
 
-                </div>
+                        </div>
+                    )}
+
+
+                </ProductConsumer>
 
 
             </ProductWrapper >
@@ -51,7 +60,7 @@ cursor:none;
 .card-footer{
     background:transparent;
     // border-top:transparent;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .scale{
     transition:all 0.3s linear;
